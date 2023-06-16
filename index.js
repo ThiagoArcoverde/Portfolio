@@ -180,6 +180,9 @@ function ProjectsClick(){
 
     var pokeAPIDiv = document.createElement("div")
     pokeAPIDiv.classList.add("projectItemDiv")
+    pokeAPIDiv.addEventListener("click", function (){
+        window.location.href = 'https://github.com/ThiagoArcoverde/ProgWebAEP2/tree/main/PokeAPI'
+    })
 
     var pokeAPITitle = document.createElement("label")
     pokeAPITitle.classList.add("projectitem")
@@ -200,6 +203,9 @@ function ProjectsClick(){
     
     var searchAPIDiv = document.createElement("div")
     searchAPIDiv.classList.add("projectItemDiv")
+    searchAPIDiv.addEventListener("click", function (){
+        window.location.href = 'https://github.com/ThiagoArcoverde/SearchAPI'
+    })
 
     var searchAPIDivTitle = document.createElement("label")
     searchAPIDivTitle.classList.add("projectitem")

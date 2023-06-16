@@ -205,7 +205,7 @@ body{
     align-items:center;
     text-align: center;
     color: whitesmoke;
-
+    cursor: pointer;
 }
 
 .projectItemDescription{
