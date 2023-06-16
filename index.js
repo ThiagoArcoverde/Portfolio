@@ -102,8 +102,8 @@ function AboutMeClick(){
     var desc = document.createElement("label")
     desc.classList.add("myDescription")
     desc.innerText = "Nascido no dia 27/01/2003, me chamo Thiago Arcoverde e tenho 20 anos. Desde pequeno sou apaixonado pelo desconhecido, sempre gostei" +
-    "de explorar coisas novas, e junto com os jogos que jogo desde criança, surgiu o meu amor pela computação. Sou uma pessoa com facilidade de" +
-    "aprender e com uma boa capacidade analítica, consigo trabalhar bem em equipe e gosto bastante de aprender e desenvolver novas tecnologias."
+    " de explorar coisas novas, e junto com os jogos que jogo desde criança, surgiu o meu amor pela computação. Sou uma pessoa com facilidade de" +
+    " aprender e com uma boa capacidade analítica, consigo trabalhar bem em equipe e gosto bastante de aprender e desenvolver novas tecnologias."
 
     var desc2 = document.createElement("label")
     desc2.classList.add("myDescription")
