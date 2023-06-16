@@ -1,0 +1,218 @@
+body{
+    background-color: rgb(29, 30, 36);
+    animation: fadeIn 0.5s ease-in;
+}
+
+.header{
+    margin: auto;
+    text-align: center;
+    /* background-color: rgb(40, 40, 60); */
+    background-color: transparent;
+    border-radius: 16px;
+    height: min-content;
+    width:100%;
+    /* border: solid rgb(200, 200, 200) 1px; */
+}
+
+.header-button{
+    color: rgb(186, 186, 196);
+    background-image: linear-gradient(to right, rgb(97, 32, 36), #350728, #5f0c0c);
+    border-radius: 16px;
+    width: 180px;
+    height: 50px;
+    font-family:monospace;
+    font-size: 20px;
+    margin: 1% 2%;
+    /* border: solid rgb(200, 200, 200) 1px; */
+    border:ridge rgb(200, 200, 200, 0.6);
+    background-size: 200% auto;
+}
+
+.header-button:hover{
+    background-position: right center;
+    cursor:pointer
+}
+
+#content{
+    padding: 1%;
+    border-radius: 46px;
+    margin: auto;
+    margin-top: 2%;
+    /* background-color: rgb(40, 40, 60); */
+    background-color: transparent;
+    width: 80%;
+    height: 550px;
+    border-top: solid rgba(255, 255, 255, 0.5) 3px;
+}
+
+.nameDescription, .name-gradient{
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+}
+
+
+.name-gradient{
+    font-size: 60px;
+    color: rgb(85, 25, 25);
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    border-bottom:solid 1px rgb(125, 125, 125);
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+}
+
+.profilePicture{
+    width: 250px;
+    height: 250px;
+    border: solid rgb(85, 25, 25) 6px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.profileDiv, .curriculumDiv, .aboutMeDiv{
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    width: 79.5%;
+    height: 550px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0; /* No início da animação, a opacidade é 0 */
+    }
+    100% {
+      opacity: 1; /* No final da animação, a opacidade é 1 */
+    }
+  }
+
+.listaCurriculo{
+    list-style-type:none;
+    list-style-position: inside;
+    color: rgb(226, 226, 226);
+    font-family:'Courier New', Courier, monospace;
+    font-size: 24px;
+    display:block;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    margin-left: 0;
+    padding-top: 2%;
+}
+
+.listaCurriculoItem{
+    margin-bottom: 3%;
+}
+
+.curriculoButton{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    margin: auto;
+    width:20%;
+    height: 10%;
+    border: solid rgb(200, 200, 200) 2px;
+    border-radius: 12px;
+    background-image: linear-gradient(to right, rgb(31, 21, 70),rgb(16, 27, 58), #102541);
+    font: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: whitesmoke;
+    font-style:normal;
+    background-size: 200% auto;
+    text-decoration: none;
+}
+
+.curriculoButton:hover{
+    background-position: right center;
+    cursor:pointer
+}
+
+.myDescription{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    margin: auto;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: fit-content;
+    width: fit-content;
+    font-size: 26px;
+    color: rgb(226, 226, 226);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    
+}
+
+.contactPictures{
+    display: block;
+    width: 175px;
+    height: 175px;
+    border: solid whitesmoke 4px;
+    border-radius: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.contactPictures:hover{
+    cursor: pointer;
+}
+
+.contactDiv{
+    padding: 2%;
+    display:flex;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-in forwards;
+    height: 550px;
+}
+
+.projectsDiv{
+    padding: 42px;
+    animation: fadeIn 0.8s ease-in forwards;
+}
+
+.projectItemDiv{
+    border: solid rgb(255, 255, 255) 3px;
+    border-radius: 32px;
+    padding: 22px;
+    margin-bottom: 40px;
+    
+}
+
+.projectitem{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    color: whitesmoke;
+
+}
+
+.projectItemDescription{
+    padding: 16px;
+    font-size: 18px;
+}
+
+.projectItemTitle{
+    font-size: 30px;
+}
