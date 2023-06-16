@@ -18,10 +18,10 @@ body{
     color: rgb(186, 186, 196);
     background-image: linear-gradient(to right, rgb(97, 32, 36), #350728, #5f0c0c);
     border-radius: 16px;
-    width: 180px;
+    width: 150px;
     height: 50px;
     font-family:monospace;
-    font-size: 20px;
+    font-size: 18px;
     margin: 1% 2%;
     /* border: solid rgb(200, 200, 200) 1px; */
     border:ridge rgb(200, 200, 200, 0.6);

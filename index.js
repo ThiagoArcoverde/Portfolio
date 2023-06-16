@@ -82,7 +82,7 @@ function CurriculumClick(){
 
     var link = document.createElement("a")
     link.classList.add("curriculoButton")
-    link.href = '../public/documents/Curriculo.pdf'
+    link.href = './public/documents/Curriculo.pdf'
     link.innerHTML = "Curriculo completo"
 
     curriculumDiv.appendChild(link)
@@ -137,7 +137,7 @@ function TecnologiesClick(){
     sql.classList.add("listaCurriculoItem")
 
     var jsts = document.createElement("li")
-    jsts.innerText = "Javasript / Typescript"
+    jsts.innerText = "Javascript / Typescript"
     jsts.classList.add("listaCurriculoItem")
 
     var htmlCss = document.createElement("li")
