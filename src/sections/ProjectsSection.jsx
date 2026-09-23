@@ -52,33 +52,31 @@ export function ProjectsSection() {
 
   return (
     <section className="projects-section section-wrap" id="projetos" aria-labelledby="projects-title">
-      <div className="section-wrap">
-        <div className="projects-heading">
-          <h2 id="projects-title">Alguns dos meus <em> projetos</em>.</h2>
-        </div>
-        <div className="projects-grid" aria-live="polite">
-          {projects.map((project, index) => (
-            <article className={`project-card ${project.accent}`} key={project.name}>
-              <div className="project-visual">
-                <span className="project-shape" aria-hidden="true">{project.shape}</span>
-                <span className="project-type">{project.type}</span>
-              </div>
-              <div className="project-info">
-                <span className="project-number">{String(index + 1).padStart(2, '0')}</span>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
-              <footer className="project-footer">
-                <div className="project-stack" aria-label={`Tecnologias: ${project.stack}`}>
-                  <span>{project.stack}</span>
-                  <span aria-hidden="true">{project.stack}</span>
-                </div>
-              </footer>
-            </article>
-          ))}
-        </div>
-        <a className="repositories-link" href="https://github.com/ThiagoArcoverde?tab=repositories" target="_blank" rel="noreferrer">Ver todos no GitHub <Arrow /></a>
+      <div className="projects-heading">
+        <h2 id="projects-title">Alguns dos meus <em> projetos</em>.</h2>
       </div>
+      <div className="projects-grid" aria-live="polite">
+        {projects.map((project, index) => (
+          <article className={`project-card ${project.accent}`} key={project.name}>
+            <div className="project-visual">
+              <span className="project-shape" aria-hidden="true">{project.shape}</span>
+              <span className="project-type">{project.type}</span>
+            </div>
+            <div className="project-info">
+              <span className="project-number">{String(index + 1).padStart(2, '0')}</span>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
+            <footer className="project-footer">
+              <div className="project-stack" aria-label={`Tecnologias: ${project.stack}`}>
+                <span>{project.stack}</span>
+                <span aria-hidden="true">{project.stack}</span>
+              </div>
+            </footer>
+          </article>
+        ))}
+      </div>
+      <a className="repositories-link" href="https://github.com/ThiagoArcoverde?tab=repositories" target="_blank" rel="noreferrer">Ver todos no GitHub <Arrow /></a>
     </section>
   )
 }
