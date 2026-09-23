@@ -49,34 +49,56 @@ export const technologies = [
   },
 ]
 
-export const featuredRepositories = [
+export const experiences = [
   {
-    name: 'homevault-api',
-    type: 'BACKEND API',
-    title: 'Homevault API',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer consequat, nibh sed tincidunt commodo, justo arcu cursus libero, vitae volutpat massa erat a neque. Praesent interdum, ipsum at feugiat commodo, libero justo posuere nibh, vitae aliquet neque mauris non erat. Donec vel lectus at sapien tincidunt malesuada. Suspendisse potenti. Morbi hendrerit, sem in tincidunt feugiat, urna lacus fermentum justo, non faucibus lectus arcu quis massa. Nam tempor, justo sed posuere consequat, erat lorem facilisis ipsum, vitae ullamcorper nisl lorem sed erat. Curabitur luctus, augue sit amet pretium consequat, magna lectus interdum sapien, vitae posuere mi magna a justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dignissim, velit at faucibus gravida, nisl nibh tincidunt erat, nec posuere libero sem ac nunc. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam feugiat, leo non consequat commodo, justo erat interdum odio, sed tincidunt massa risus non justo. Quisque vitae lorem vel augue dictum tincidunt. Mauris sed mauris sed arcu placerat consequat. Fusce vulputate, magna sed fermentum malesuada, erat mi posuere lectus, at finibus tortor lorem non nulla. Aenean id orci sed purus pretium consequat. Donec euismod augue at lectus dignissim, sed feugiat lectus malesuada. Proin ultrices, ipsum vitae consequat tincidunt, sem augue aliquet libero, vel mattis lorem magna sed justo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras consequat lectus sed lacus vulputate, vitae pretium libero finibus. Nulla facilisi. Integer at lorem eget justo porttitor tincidunt. Sed auctor, erat nec accumsan consequat, nisl sem commodo velit, non cursus arcu sapien vitae justo.',
-    stack: 'C#  ·  .NET  ·  ASP.NET Core  ·  Entity Framework Core  ·  SQL Server',
-    accent: 'coral',
-    shape: '↗',
+    number: '01',
+    role: 'Desenvolvedor Backend',
+    period: 'MAI/2025 - ATUAL',
+    domain: 'SISTEMAS FINANCEIROS REGULADOS',
+    description: 'Evoluo APIs, workers e rotinas críticas com .NET, VB e TypeScript, integrando serviços externos e dados SQL e NoSQL. Também participo da preparação de ambientes UAT, GMUDs e deploys.',
   },
   {
-    name: 'SearchAPI',
-    type: 'SEARCH API',
-    title: 'Search API',
-    description: 'API de busca construída com C# e ASP.NET Core, acompanhada de uma interface web.',
-    stack: 'C#  ·  ASP.NET Core  ·  REST API  ·  HTML  ·  CSS',
-    accent: 'blue',
-    shape: '⌕',
+    number: '02',
+    role: 'Desenvolvedor de Software',
+    period: 'AGO/2024 - MAI/2025',
+    domain: 'MICROSSERVIÇOS E MODERNIZAÇÃO',
+    description: 'Desenvolvi APIs .NET/C# em microsserviços e interfaces com Razor e JavaScript, além de manter aplicações Xamarin. Atuei na modernização de sistemas legados com princípios de arquitetura hexagonal.',
   },
   {
-    name: 'Pokedex',
-    type: 'BLAZOR APP',
-    title: 'Pokédex',
-    description: 'Aplicação Blazor com informações e navegação por diferentes Pokémon.',
-    stack: 'C#  ·  .NET  ·  Blazor  ·  HTML  ·  CSS',
-    accent: 'sage',
-    shape: '◌',
+    number: '03',
+    role: 'Desenvolvedor Full-stack',
+    period: 'JAN/2023 - AGO/2024',
+    domain: 'PRODUTOS E SISTEMAS DE GESTÃO',
+    description: 'Atuei na evolução de um produto de gestão em .NET, contribuindo para APIs, regras de cálculo e fluxos internos. Participei de decisões de arquitetura, DDD, code review, CI/CD e ferramentas como query runner.',
   },
 ]
 
-export const githubRepositoriesUrl = 'https://api.github.com/users/ThiagoArcoverde/repos?per_page=100&sort=updated'
+export const featuredProjects = [
+  {
+    name: 'unirota',
+    type: 'PROTÓTIPO EM EQUIPE',
+    title: 'Unirota',
+    description: 'Protótipo de caronas universitárias. Atuei no aplicativo e na API, com autenticação, convites, perfil, busca e filtros.',
+    role: 'DESENVOLVEDOR · TEAM LEAD / PO',
+    stack: 'C#  ·  .NET  ·  React Native  ·  PostgreSQL  ·  SignalR',
+    accent: 'blue',
+    shape: '↔',
+    links: [
+      { label: 'Ver aplicativo', href: 'https://github.com/Unirota/Unirota.APP' },
+      { label: 'Ver API', href: 'https://github.com/Unirota/Unirota.API' },
+    ],
+  },
+  {
+    name: 'homevault-api',
+    type: 'API BACKEND',
+    title: 'Homevault API',
+    description: 'API em desenvolvimento para automações residenciais, organizada para evoluir com validação, persistência desacoplada e novas integrações.',
+    role: 'PROJETO INDIVIDUAL',
+    stack: 'C#  ·  .NET 10  ·  ASP.NET Core  ·  EF Core  ·  SQLite',
+    accent: 'coral',
+    shape: '⌂',
+    links: [
+      { label: 'Ver no GitHub', href: 'https://github.com/ThiagoArcoverde/homevault-api' },
+    ],
+  },
+]

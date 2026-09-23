@@ -2,6 +2,7 @@ import { SiteFooter } from './components/SiteFooter'
 import { SiteHeader } from './components/SiteHeader'
 import { PageCarousel } from './components/PageCarousel'
 import { ContactSection } from './sections/ContactSection'
+import { ExperienceSection } from './sections/ExperienceSection'
 import { ExpertiseSection } from './sections/ExpertiseSection'
 import { HeroSection } from './sections/HeroSection'
 import { ProjectsSection } from './sections/ProjectsSection'
@@ -13,6 +14,7 @@ function App() {
       <main id="top">
         <PageCarousel>
           <HeroSection />
+          <ExperienceSection />
           <ExpertiseSection />
           <ProjectsSection />
           <ContactSection />

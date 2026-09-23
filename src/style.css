@@ -424,3 +424,71 @@ h1 em, h2 em { color: var(--copper); font-style: italic; }
   h1 { font-size: 2.6rem; }
   .terminal-status { display: none; }
 }
+
+.experience-section { height: 100%; padding: 48px 0; }
+.experience-heading { margin-bottom: 42px; }
+.experience-heading h2 { margin-bottom: 0; font-size: clamp(3rem, 5vw, 5rem); }
+.experience-list { display: grid; gap: 22px; }
+.experience-item { position: relative; display: grid; grid-template-columns: minmax(112px, 0.18fr) minmax(0, 0.82fr); gap: 28px; padding: 18px 0; }
+.experience-item::before { position: absolute; top: -1px; left: 0; width: 44px; height: 3px; background: var(--copper); content: ''; }
+.experience-item:nth-child(2)::before { background: var(--petrol); }
+.experience-item:nth-child(3)::before { background: var(--sage); }
+.experience-meta { display: flex; flex-direction: column; gap: 9px; padding-top: 5px; color: var(--muted); font-family: var(--mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; }
+.experience-copy { display: grid; grid-template-columns: minmax(250px, 0.42fr) minmax(0, 0.58fr); gap: 28px; align-items: center; }
+.experience-overview { min-width: 0; }
+.experience-domain { margin: 0 0 9px; color: var(--copper); font-family: var(--mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; }
+.experience-item:nth-child(2) .experience-domain { color: #78aaa1; }
+.experience-item:nth-child(3) .experience-domain { color: var(--sage); }
+.experience-copy h3 { margin: 0; font-family: Georgia, serif; font-size: 1.65rem; font-weight: 400; letter-spacing: -0.04em; line-height: 1.1; }
+.experience-description { max-width: 440px; margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+.projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.project-card { height: 438px; border-radius: 4px; }
+.project-role { display: block; margin-top: auto; color: var(--ink); font-family: var(--mono); font-size: 0.64rem; font-weight: 700; letter-spacing: 0.07em; }
+.project-footer { flex-basis: auto; overflow: visible; padding: 0 22px 24px; }
+.project-stack { display: block; width: auto; overflow: visible; color: var(--copper); white-space: normal; animation: none; }
+.project-stack span { padding-right: 0; }
+.project-stack span[aria-hidden] { display: none; }
+.project-links { display: flex; flex-wrap: wrap; gap: 9px 16px; margin-top: 14px; }
+.project-link { display: inline-flex; align-items: center; gap: 6px; margin: 0; color: var(--ink); font-family: var(--mono); font-size: 0.67rem; font-weight: 700; transition: color 180ms ease; }
+.project-link:hover, .project-link:focus-visible { color: var(--copper); }
+.project-link span { color: var(--copper); font-size: 0.9rem; }
+
+@media (min-width: 1200px) and (min-height: 900px) and (max-height: 999px) {
+  .experience-section { padding: 20px 0; }
+  .experience-heading { margin-bottom: 30px; }
+  .experience-heading h2 { font-size: clamp(2.7rem, 4.4vw, 4.2rem); }
+  .experience-item { padding: 11px 0; }
+  .experience-domain { margin-bottom: 8px; }
+  .experience-description { font-size: 0.82rem; line-height: 1.5; }
+  .project-card { height: 414px; }
+  .project-info h3 { margin: 18px 0 10px; }
+  .project-info p { margin-bottom: 10px; }
+  .project-footer { padding-bottom: 16px; }
+  .project-links { margin-top: 10px; }
+}
+
+@media (max-width: 1199px), (max-height: 899px) {
+  .experience-section { height: auto; display: block; padding: 56px 0; }
+  .experience-heading { width: min(100%, var(--reading-max)); margin-inline: auto; text-align: center; }
+  .experience-list { max-width: var(--content-max); margin-inline: auto; }
+  .experience-item { grid-template-columns: minmax(132px, 0.23fr) minmax(0, 1fr); }
+  .project-card { height: auto; }
+  .project-footer { padding: 0 22px 24px; }
+}
+
+@media (max-width: 800px) {
+  .experience-copy { grid-template-columns: 1fr; gap: 12px; }
+  .experience-domain { margin-bottom: 10px; }
+  .projects-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 599px) {
+  .experience-section { padding: 44px 0; }
+  .experience-heading h2 { font-size: 2.65rem; }
+  .experience-item { grid-template-columns: 1fr; gap: 16px; padding: 20px 0; }
+  .experience-meta { flex-direction: row; align-items: center; justify-content: space-between; }
+  .experience-copy h3 { font-size: 1.45rem; }
+  .experience-description { font-size: 0.86rem; }
+  .project-footer { padding: 0 18px 20px; }
+}

@@ -1,6 +1,6 @@
 import { Children, useEffect, useRef, useState } from 'react'
 
-const panels = ['Principal', 'Especialidades', 'Projetos', 'Contato']
+const panels = ['Principal', 'Experiência', 'Especialidades', 'Projetos', 'Contato']
 const carouselModeQuery = '(min-width: 1200px) and (min-height: 900px)'
 
 export function PageCarousel({ children }) {
@@ -69,8 +69,15 @@ export function PageCarousel({ children }) {
   function handleKeyDown(event) {
     if (!isCarouselMode) return
 
-    if (event.key === 'ArrowLeft') movePanel(-1)
-    if (event.key === 'ArrowRight') movePanel(1)
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault()
+      movePanel(-1)
+    }
+
+    if (event.key === 'ArrowRight') {
+      event.preventDefault()
+      movePanel(1)
+    }
   }
 
   return (
