@@ -16,6 +16,7 @@
   --linkedin: #4c82ad;
   --github: #8b949e;
   --email: #bd7568;
+  --control-border: #665c4f;
   --entrance-duration: 650ms;
   --mono: 'Courier New', monospace;
   --content-max: 1120px;
@@ -165,6 +166,62 @@ h1 em, h2 em { color: var(--copper); font-style: italic; }
 
 @media (prefers-reduced-motion: reduce) {
   .project-stack { animation: none; }
+}
+
+.site-shell { background: var(--paper); color: var(--ink); transition: background-color 220ms ease, color 220ms ease; }
+.header-actions { display: flex; align-items: center; gap: 18px; }
+.theme-toggle { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--control-border); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease; }
+.theme-toggle:hover, .theme-toggle:focus-visible { border-color: var(--copper); background: var(--surface); color: var(--copper); transform: rotate(8deg); }
+.theme-toggle svg { width: 16px; height: 16px; }
+
+[data-theme='light'] {
+  --ink: #25221e;
+  --muted: #6d665d;
+  --paper: #f5f0e7;
+  --surface: #fffdf8;
+  --line: #d8cec0;
+  --wood: #b27a55;
+  --sage: #55734f;
+  --copper: #a6522d;
+  --petrol: #356d6b;
+  --control-border: #a99b8b;
+  --terminal-ink: #302c27;
+  --terminal-muted: #6d665d;
+  --terminal-title: #514a42;
+  --terminal-comment: #766c61;
+  --code-type: #28716d;
+  --code-string: #a45425;
+  --code-symbol: #61594f;
+  --terminal-border: #cfc2b1;
+  --terminal-rule: #cfc2b1;
+  --terminal-rule-tight: #ded5c9;
+  --contact-hover: #f0e8dc;
+  --contact-icon-bg: #f1e9de;
+}
+
+[data-theme='light'] .hero-note { color: #665d53; }
+[data-theme='light'] .terminal-card { border-color: var(--terminal-border); color: var(--terminal-ink); box-shadow: 16px 18px 0 var(--wood), inset 0 0 0 1px rgba(80, 60, 40, 0.06); }
+[data-theme='light'] .terminal-topbar { border-color: var(--terminal-border); color: var(--terminal-muted); }
+[data-theme='light'] .terminal-dots i { background: var(--control-border); }
+[data-theme='light'] .terminal-title, [data-theme='light'] .terminal-prompt { color: var(--terminal-title); }
+[data-theme='light'] .code-comment, [data-theme='light'] .terminal-meta { color: var(--terminal-comment); }
+[data-theme='light'] .code-type { color: var(--code-type); }
+[data-theme='light'] .code-string { color: var(--code-string); }
+[data-theme='light'] .code-symbol { color: var(--code-symbol); }
+[data-theme='light'] .terminal-rule { background: var(--terminal-rule); }
+[data-theme='light'] .terminal-rule-tight { background: var(--terminal-rule-tight); }
+[data-theme='light'] .terminal-meta strong { color: var(--terminal-ink); }
+[data-theme='light'] .contact-card { background: var(--surface); }
+[data-theme='light'] .contact-card:hover, [data-theme='light'] .contact-card:focus-visible { background: var(--contact-hover); }
+[data-theme='light'] .contact-card-icon { border-color: var(--control-border); background: var(--contact-icon-bg); }
+[data-theme='light'] .project-card { border-color: var(--line); background: var(--surface); }
+[data-theme='light'] .project-card.coral { background: rgba(166, 82, 45, 0.1); }
+[data-theme='light'] .project-card.blue { background: rgba(53, 109, 107, 0.1); }
+[data-theme='light'] .project-card.sage { background: rgba(85, 115, 79, 0.1); }
+
+@media (max-width: 800px) {
+  .header-actions { gap: 10px; }
+  .theme-toggle { width: 34px; height: 34px; }
 }
 
 .technology-heading { grid-template-columns: 0.7fr 1.3fr; }
@@ -491,4 +548,29 @@ h1 em, h2 em { color: var(--copper); font-style: italic; }
   .experience-copy h3 { font-size: 1.45rem; }
   .experience-description { font-size: 0.86rem; }
   .project-footer { padding: 0 18px 20px; }
+}
+
+.theme-transition,
+.theme-transition * {
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 420ms;
+  transition-timing-function: ease;
+}
+
+.theme-transition .theme-toggle svg {
+  animation: theme-icon-in 420ms ease both;
+}
+
+@keyframes theme-icon-in {
+  from { opacity: 0; transform: scale(0.55) rotate(-80deg); }
+  to { opacity: 1; transform: scale(1) rotate(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-transition,
+  .theme-transition * {
+    transition-duration: 0ms;
+  }
+
+  .theme-transition .theme-toggle svg { animation: none; }
 }
