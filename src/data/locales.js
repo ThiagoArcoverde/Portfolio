@@ -1,4 +1,7 @@
 import { experiences, featuredProjects, technologies } from './portfolio'
+import portugueseResume from '../assets/resume/curriculo-thiago-arcoverde-pt-br.pdf'
+import englishResume from '../assets/resume/curriculo-thiago-arcoverde-en.pdf'
+import spanishResume from '../assets/resume/curriculo-thiago-arcoverde-es.pdf'
 
 const englishTechnologies = [
   { number: '01', title: '.NET', text: 'Robust APIs, scalable services, and backend applications ready to evolve.', category: 'BACKEND' },
@@ -126,11 +129,15 @@ const portuguese = {
   contact: {
     heading: 'Como me',
     accent: 'encontrar?',
+    intro: 'Quer conversar sobre produtos, APIs ou oportunidades? Escolha um caminho e me escreva.',
     linkedinKicker: 'REDE PROFISSIONAL',
     linkedinDescription: 'Perfil profissional',
     githubKicker: 'CÓDIGO ABERTO',
     githubDescription: 'Código e projetos',
     emailKicker: 'CONTATO DIRETO',
+    resumeLabel: 'Baixar currículo',
+    resumeHref: portugueseResume,
+    resumeFileName: 'curriculo-thiago-arcoverde-pt-br.pdf',
   },
   technologies,
   experiences,
@@ -185,11 +192,15 @@ const english = {
   contact: {
     heading: 'How to',
     accent: 'find me?',
+    intro: 'Want to talk about products, APIs, or opportunities? Choose a path and get in touch.',
     linkedinKicker: 'PROFESSIONAL NETWORK',
     linkedinDescription: 'Professional profile',
     githubKicker: 'OPEN SOURCE',
     githubDescription: 'Code and projects',
     emailKicker: 'DIRECT CONTACT',
+    resumeLabel: 'Download resume',
+    resumeHref: englishResume,
+    resumeFileName: 'curriculo-thiago-arcoverde-en.pdf',
   },
   technologies: englishTechnologies,
   experiences: englishExperiences,
@@ -244,11 +255,15 @@ const spanish = {
   contact: {
     heading: 'Cómo',
     accent: 'encontrarme?',
+    intro: '¿Quieres hablar sobre productos, APIs u oportunidades? Elige un camino y escríbeme.',
     linkedinKicker: 'RED PROFESIONAL',
     linkedinDescription: 'Perfil profesional',
     githubKicker: 'CÓDIGO ABIERTO',
     githubDescription: 'Código y proyectos',
     emailKicker: 'CONTACTO DIRECTO',
+    resumeLabel: 'Descargar currículum',
+    resumeHref: spanishResume,
+    resumeFileName: 'curriculo-thiago-arcoverde-es.pdf',
   },
   technologies: spanishTechnologies,
   experiences: spanishExperiences,

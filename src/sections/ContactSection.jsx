@@ -1,11 +1,11 @@
 import { Arrow } from '../components/Arrow'
-import { Mail } from 'lucide-react'
+import { Download, Mail } from 'lucide-react'
 
 export function ContactSection({ content }) {
   return (
     <section className="contact-section section-wrap" id="contato" aria-labelledby="contact-title">
       <h2 id="contact-title">{content.heading} <em>{content.accent}</em></h2>
-      < br/>
+      <p className="contact-intro">{content.intro}</p>
       <div className="contact-links">
         <a className="contact-card linkedin-card" href="https://www.linkedin.com/in/thiago-arcoverde/" target="_blank" rel="noreferrer">
           <span className="contact-card-icon social-icon social-icon-linkedin" aria-hidden="true">in</span>
@@ -23,6 +23,11 @@ export function ContactSection({ content }) {
           <span className="contact-card-arrow"><Arrow /></span>
         </a>
       </div>
+      <a className="repositories-link resume-download" href={content.resumeHref} download={content.resumeFileName}>
+        <span className="resume-download-icon"><Download aria-hidden="true" /></span>
+        <span className="resume-download-label">{content.resumeLabel}</span>
+        <Arrow />
+      </a>
     </section>
   )
 }
