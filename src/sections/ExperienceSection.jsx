@@ -1,10 +1,8 @@
-import { experiences } from '../data/portfolio'
-
-export function ExperienceSection() {
+export function ExperienceSection({ content, experiences }) {
   return (
     <section className="experience-section section-wrap" id="experiencia" aria-labelledby="experience-title">
       <div className="experience-heading">
-        <h2 id="experience-title">Experiência além<br />do <em>código.</em></h2>
+        <h2 id="experience-title">{content.heading}<br />do <em>{content.accent}</em></h2>
       </div>
       <div className="experience-list">
         {experiences.map((experience) => (

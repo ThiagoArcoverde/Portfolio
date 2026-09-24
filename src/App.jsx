@@ -7,6 +7,7 @@ import { ExperienceSection } from './sections/ExperienceSection'
 import { ExpertiseSection } from './sections/ExpertiseSection'
 import { HeroSection } from './sections/HeroSection'
 import { ProjectsSection } from './sections/ProjectsSection'
+import { getInitialLanguage, locales } from './data/locales'
 
 function getInitialTheme() {
   const savedTheme = window.localStorage.getItem('portfolio-theme')
@@ -16,10 +17,16 @@ function getInitialTheme() {
 
 function App() {
   const [theme, setTheme] = useState(getInitialTheme)
+  const [language, setLanguage] = useState(getInitialLanguage)
   const [isThemeTransitioning, setIsThemeTransitioning] = useState(false)
   const transitionTimeout = useRef(null)
+  const content = locales[language]
 
   useEffect(() => () => window.clearTimeout(transitionTimeout.current), [])
+
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
 
   function toggleTheme() {
     window.clearTimeout(transitionTimeout.current)
@@ -33,16 +40,22 @@ function App() {
     })
   }
 
+  function changeLanguage(nextLanguage) {
+    if (!locales[nextLanguage]) return
+    setLanguage(nextLanguage)
+    window.localStorage.setItem('portfolio-language', nextLanguage)
+  }
+
   return (
     <div className={`site-shell${isThemeTransitioning ? ' theme-transition' : ''}`} data-theme={theme}>
-      <SiteHeader theme={theme} onToggleTheme={toggleTheme} />
+      <SiteHeader theme={theme} onToggleTheme={toggleTheme} language={language} onChangeLanguage={changeLanguage} content={content.header} />
       <main id="top">
-        <PageCarousel>
-          <HeroSection />
-          <ExperienceSection />
-          <ExpertiseSection />
-          <ProjectsSection />
-          <ContactSection />
+        <PageCarousel content={content.carousel}>
+          <HeroSection content={content.hero} terminal={content.terminal} />
+          <ExperienceSection content={content.experience} experiences={content.experiences} />
+          <ExpertiseSection content={content.expertise} technologies={content.technologies} />
+          <ProjectsSection content={content.projects} projects={content.featuredProjects} />
+          <ContactSection content={content.contact} />
         </PageCarousel>
       </main>
       <SiteFooter />

@@ -1,12 +1,10 @@
-import { technologies } from '../data/portfolio'
-
-export function ExpertiseSection() {
+export function ExpertiseSection({ content, technologies }) {
   return (
     <section className="section-wrap expertise-section" id="expertise" aria-labelledby="expertise-title">
       <div className="section-heading technology-heading">
         <div>
-          <h2 id="expertise-title">Tecnologias que conheço<br /><em>e uso.</em></h2>
-          <p className="technology-intro">Tecnologias que conheço e uso para construir produtos claros, confiáveis e prontos para crescer.</p>
+          <h2 id="expertise-title">{content.heading}<br /><em>{content.accent}</em></h2>
+          <p className="technology-intro">{content.intro}</p>
         </div>
       </div>
       <div className="technology-grid">

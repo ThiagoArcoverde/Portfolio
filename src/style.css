@@ -52,7 +52,7 @@ h1, h2, h3, p { margin-top: 0; }
 h1, h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -0.055em; line-height: 0.98; }
 h1 { max-width: 650px; margin-bottom: 28px; font-size: clamp(3rem, 5.6vw, 5.4rem); }
 h1 em, h2 em { color: var(--copper); font-style: italic; }
-.hero-intro { max-width: 470px; margin-bottom: 36px; color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
+.hero-intro { max-width: 480px; margin-bottom: 36px; color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
 .hero-note { max-width: 410px; margin-bottom: 0; padding-left: 18px; border-left: 2px solid var(--copper); color: #c4bbae; font-family: var(--mono); font-size: 0.78rem; line-height: 1.65; }
 .terminal-card { position: relative; width: min(100%, 680px); overflow: hidden; border: 1px solid #494238; background: var(--surface); color: #e2dbcd; box-shadow: 16px 18px 0 var(--wood), inset 0 0 0 1px rgba(255, 255, 255, 0.025); }
 .terminal-topbar { display: flex; align-items: center; justify-content: space-between; min-height: 48px; padding: 14px 18px; border-bottom: 1px solid #494238; color: #9c958a; font-family: var(--mono); font-size: 0.72rem; }
@@ -170,6 +170,17 @@ h1 em, h2 em { color: var(--copper); font-style: italic; }
 
 .site-shell { background: var(--paper); color: var(--ink); transition: background-color 220ms ease, color 220ms ease; }
 .header-actions { display: flex; align-items: center; gap: 18px; }
+.header-link { display: inline-flex; width: 154px; min-width: 154px; align-items: center; justify-content: flex-end; }
+.language-control { display: inline-flex; align-items: center; gap: 7px; }
+.language-icon { width: 14px; height: 14px; color: var(--muted); stroke-width: 1.8; }
+.language-switcher { --language-button-width: 30px; position: relative; display: grid; grid-template-columns: repeat(3, var(--language-button-width)); align-items: center; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); overflow: hidden; }
+.language-switcher::before { position: absolute; top: 3px; bottom: 3px; left: 3px; width: var(--language-button-width); border-radius: 999px; background: var(--copper); box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14); content: ''; pointer-events: none; transform: translateX(0); transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1); }
+.language-switcher.language-en::before { transform: translateX(var(--language-button-width)); }
+.language-switcher.language-es::before { transform: translateX(calc(var(--language-button-width) * 2)); }
+.language-switcher button { position: relative; z-index: 1; width: var(--language-button-width); min-width: var(--language-button-width); padding: 4px 0; border: 0; border-radius: 999px; background: transparent; color: var(--muted); font-family: var(--mono); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.04em; cursor: pointer; transition: color 180ms ease, transform 160ms ease; }
+.language-switcher button:hover, .language-switcher button:focus-visible { color: var(--ink); }
+.language-switcher button:active { transform: scale(0.88); }
+.language-switcher button.is-active { color: var(--paper); }
 .theme-toggle { display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid var(--control-border); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease; }
 .theme-toggle:hover, .theme-toggle:focus-visible { border-color: var(--copper); background: var(--surface); color: var(--copper); transform: rotate(8deg); }
 .theme-toggle svg { width: 16px; height: 16px; }
@@ -221,6 +232,10 @@ h1 em, h2 em { color: var(--copper); font-style: italic; }
 
 @media (max-width: 800px) {
   .header-actions { gap: 10px; }
+  .header-link { width: 136px; min-width: 136px; }
+  .language-control { gap: 5px; }
+  .language-icon { width: 13px; height: 13px; }
+  .language-switcher { --language-button-width: 28px; }
   .theme-toggle { width: 34px; height: 34px; }
 }
 
@@ -431,6 +446,7 @@ h1 em, h2 em { color: var(--copper); font-style: italic; }
     display: grid;
     place-items: center;
     width: 44px;
+    min-width: 44px;
     height: 44px;
     font-size: 0;
   }
@@ -573,6 +589,8 @@ h1 em, h2 em { color: var(--copper); font-style: italic; }
   }
 
   .theme-transition .theme-toggle svg { animation: none; }
+  .language-switcher button { transition-duration: 0ms; }
+  .language-switcher::before { transition-duration: 0ms; }
 }
 
 .technology-grid {
@@ -656,3 +674,4 @@ h1 em, h2 em { color: var(--copper); font-style: italic; }
 .technology-item:nth-child(4n + 3) {
   border-bottom: 1px solid var(--line);
 }
+

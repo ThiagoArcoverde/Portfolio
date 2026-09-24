@@ -1,14 +1,12 @@
 import { Arrow } from '../components/Arrow'
-import { featuredProjects } from '../data/portfolio'
-
-export function ProjectsSection() {
+export function ProjectsSection({ content, projects }) {
   return (
     <section className="projects-section section-wrap" id="projetos" aria-labelledby="projects-title">
       <div className="projects-heading">
-        <h2 id="projects-title">Alguns dos meus <em> projetos</em>.</h2>
+        <h2 id="projects-title">{content.heading}<em>{content.accent}</em></h2>
       </div>
       <div className="projects-grid">
-        {featuredProjects.map((project, index) => (
+        {projects.map((project, index) => (
           <article className={`project-card ${project.accent}`} key={project.name}>
             <div className="project-visual">
               <span className="project-shape" aria-hidden="true">{project.shape}</span>
@@ -21,7 +19,7 @@ export function ProjectsSection() {
               <span className="project-role">{project.role}</span>
             </div>
             <footer className="project-footer">
-              <div className="project-stack" aria-label={`Tecnologias: ${project.stack}`}>
+              <div className="project-stack" aria-label={`${content.technologyLabel}: ${project.stack}`}>
                 <span>{project.stack}</span>
                 <span aria-hidden="true">{project.stack}</span>
               </div>
@@ -36,7 +34,7 @@ export function ProjectsSection() {
           </article>
         ))}
       </div>
-      <a className="repositories-link" href="https://github.com/ThiagoArcoverde?tab=repositories" target="_blank" rel="noreferrer">Ver todos no GitHub <Arrow /></a>
+      <a className="repositories-link" href="https://github.com/ThiagoArcoverde?tab=repositories" target="_blank" rel="noreferrer">{content.repositories} <Arrow /></a>
     </section>
   )
 }
