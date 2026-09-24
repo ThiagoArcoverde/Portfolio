@@ -574,3 +574,85 @@ h1 em, h2 em { color: var(--copper); font-style: italic; }
 
   .theme-transition .theme-toggle svg { animation: none; }
 }
+
+.technology-grid {
+  gap: 16px;
+  border-top: 0;
+}
+
+.technology-item,
+.technology-item:nth-child(4n),
+.technology-item:nth-child(2n),
+.technology-item:nth-child(4n + 1),
+.technology-item:nth-child(4n + 3) {
+  min-height: 0;
+  padding: 18px 20px 20px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  transition: background-color 220ms ease, border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+}
+
+.technology-item::before {
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  border-radius: 4px 4px 0 0;
+  transform: scaleX(0.2);
+}
+
+.technology-item:hover {
+  border-color: var(--copper);
+  background: var(--surface);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.technology-item:nth-child(4n + 1):hover { border-color: var(--copper); }
+.technology-item:nth-child(4n + 2):hover { border-color: var(--petrol); }
+.technology-item:nth-child(4n + 3):hover { border-color: var(--sage); }
+.technology-item:nth-child(4n):hover { border-color: #78aaa1; }
+
+.technology-meta { min-height: 25px; }
+.technology-category { padding: 4px 7px; border: 1px solid var(--line); border-radius: 999px; font-size: 0.58rem; }
+.technology-item h3 { margin: 24px 0 10px; font-size: 1.8rem; }
+.technology-item p { max-width: none; font-size: 0.88rem; line-height: 1.45; }
+
+[data-theme='light'] .technology-item:hover {
+  background: #fffaf2;
+  box-shadow: 0 8px 18px rgba(77, 58, 38, 0.09);
+}
+
+@media (max-width: 800px) {
+  .technology-grid { gap: 12px; }
+
+  .technology-item,
+  .technology-item:nth-child(4n),
+  .technology-item:nth-child(2n) {
+    padding: 16px 18px 18px;
+  }
+
+  .technology-item h3 { margin: 20px 0 9px; font-size: 1.5rem; }
+  .technology-item p { font-size: 0.82rem; }
+}
+
+@media (max-width: 599px) {
+  .technology-grid { gap: 10px; }
+
+  .technology-item,
+  .technology-item:nth-child(2n),
+  .technology-item:nth-child(4n) {
+    min-height: 0;
+    padding: 16px;
+    border: 1px solid var(--line);
+  }
+
+  .technology-item h3 { margin-top: 22px; }
+}
+
+.technology-item:nth-child(4n + 1),
+.technology-item:nth-child(4n + 3) {
+  border-bottom: 1px solid var(--line);
+}
