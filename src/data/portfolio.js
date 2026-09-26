@@ -98,7 +98,8 @@ export const featuredProjects = [
     accent: 'coral',
     shape: '⌂',
     links: [
-      { label: 'Ver no GitHub', href: 'https://github.com/ThiagoArcoverde/homevault-api' },
+      { label: 'Ver API', href: 'https://github.com/ThiagoArcoverde/homevault-api' },
+      { label: 'Ver WEB', href: 'https://github.com/ThiagoArcoverde/homevault-web' },
     ],
   },
 ]

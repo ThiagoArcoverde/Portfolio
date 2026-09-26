@@ -37,7 +37,8 @@ const englishProjects = [
     description: 'API in development for home automation, organized to evolve with validation, decoupled persistence, and new integrations.',
     role: 'SOLO PROJECT',
     links: [
-      { label: 'View on GitHub', href: 'https://github.com/ThiagoArcoverde/homevault-api' },
+      { label: 'View API', href: 'https://github.com/ThiagoArcoverde/homevault-api' },
+      { label: 'View WEB', href: 'https://github.com/ThiagoArcoverde/homevault-web' },
     ],
   },
 ]
@@ -76,7 +77,8 @@ const spanishProjects = [
     description: 'API en desarrollo para automatización residencial, organizada para evolucionar con validación, persistencia desacoplada y nuevas integraciones.',
     role: 'PROYECTO INDIVIDUAL',
     links: [
-      { label: 'Ver en GitHub', href: 'https://github.com/ThiagoArcoverde/homevault-api' },
+      { label: 'Ver API', href: 'https://github.com/ThiagoArcoverde/homevault-api' },
+      { label: 'Ver WEB', href: 'https://github.com/ThiagoArcoverde/homevault-web' },
     ],
   },
 ]
