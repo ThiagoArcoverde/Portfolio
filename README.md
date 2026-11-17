@@ -43,7 +43,7 @@ Construído com React e Vite, este projeto reúne experiência profissional, tec
 
 ### Pré-requisitos
 
-- Node.js 18 ou superior
+- Node.js 20.19 ou superior, ou 22.12 ou superior
 - npm
 
 ### Instalar e executar
@@ -93,7 +93,7 @@ Os arquivos e nomes usados no download são associados ao idioma em [src/data/lo
 
 ## GitHub Pages
 
-O projeto usa a base `/Portfolio/`, definida em [vite.config.js](vite.config.js), para funcionar no GitHub Pages do repositório `Portfolio`.
+O projeto usa a base `/Portfolio/`, definida em [vite.config.mjs](vite.config.mjs), para funcionar no GitHub Pages do repositório `Portfolio`.
 
 Se a configuração de deploy ou o caminho base forem alterados, execute `npm run check` e confira os assets gerados em `dist/`.
 
