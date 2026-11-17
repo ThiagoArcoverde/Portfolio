@@ -28,6 +28,10 @@ function App() {
     document.documentElement.lang = language
   }, [language])
 
+  useEffect(() => {
+    window.localStorage.setItem('portfolio-language', language)
+  }, [language])
+
   function toggleTheme() {
     window.clearTimeout(transitionTimeout.current)
     setIsThemeTransitioning(true)
@@ -43,7 +47,10 @@ function App() {
   function changeLanguage(nextLanguage) {
     if (!locales[nextLanguage]) return
     setLanguage(nextLanguage)
-    window.localStorage.setItem('portfolio-language', nextLanguage)
+
+    const url = new URL(window.location.href)
+    url.searchParams.set('lang', nextLanguage)
+    window.history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`)
   }
 
   return (

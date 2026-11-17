@@ -30,6 +30,7 @@ Construído com React e Vite, este projeto reúne experiência profissional, tec
 - Layout responsivo para desktop e dispositivos móveis.
 - Carrossel horizontal em telas grandes e navegação empilhada em telas menores.
 - Conteúdo localizado em português, inglês e espanhol.
+- Idioma selecionável pela URL com `?lang=pt-BR`, `?lang=en` ou `?lang=es`; a escolha fica salva no navegador e é usada quando a URL não informa um idioma válido.
 - Tema claro e escuro persistido no navegador.
 - Download do currículo correspondente ao idioma selecionado.
 - Navegação por teclado, foco visível e estrutura semântica.

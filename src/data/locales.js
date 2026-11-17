@@ -274,7 +274,18 @@ const spanish = {
 
 export const locales = { 'pt-BR': portuguese, en: english, es: spanish }
 
+function getLanguageFromUrl() {
+  const language = new URLSearchParams(window.location.search).get('lang')?.toLowerCase()
+
+  if (language === 'pt' || language === 'pt-br') return 'pt-BR'
+  if (language === 'en' || language === 'es') return language
+  return null
+}
+
 export function getInitialLanguage() {
+  const urlLanguage = getLanguageFromUrl()
+  if (urlLanguage) return urlLanguage
+
   const savedLanguage = window.localStorage.getItem('portfolio-language')
   if (savedLanguage === 'pt-BR' || savedLanguage === 'en' || savedLanguage === 'es') return savedLanguage
   if (window.navigator.language.toLowerCase().startsWith('es')) return 'es'
