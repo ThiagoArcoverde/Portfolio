@@ -1,16 +1,8 @@
-<div align="center">
-  <h1>Thiago Arcoverde</h1>
-  <p><strong>Software Engineer</strong> · .NET · C# · Backend</p>
-  <p>
-    <a href="https://thiagoarcoverde.github.io/Portfolio/">Portfólio</a>
-    ·
-    <a href="https://github.com/ThiagoArcoverde">GitHub</a>
-    ·
-    <a href="https://www.linkedin.com/in/thiago-arcoverde/">LinkedIn</a>
-  </p>
-</div>
+# Thiago Arcoverde
 
-<br>
+**Software Engineer** · .NET · C# · Backend
+
+[Portfólio](https://thiagoarcoverde.github.io/Portfolio/) · [GitHub](https://github.com/ThiagoArcoverde) · [LinkedIn](https://www.linkedin.com/in/thiago-arcoverde/)
 
 > Portfólio pessoal focado em engenharia de software, APIs e soluções backend confiáveis.
 
@@ -100,4 +92,3 @@ Se a configuração de deploy ou o caminho base forem alterados, execute `npm ru
 ## Arquitetura
 
 Consulte [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) para conhecer as decisões de organização, acessibilidade, responsividade e limites de dependências do projeto.
-
